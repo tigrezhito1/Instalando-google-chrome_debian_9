@@ -1,0 +1,59 @@
+Instalando en debian -9 Google Crome
+aqui pongo mis comandos.
+
+1. pagina oficial del google chrome(descargar)
+
+https://www.google.com.mx/chrome/?brand=CHBD&gclid=EAIaIQobChMI84CK6ZyQ3gIVxEGGCh1icQdKEAAYASAAEgIpZ_D_BwE&gclsrc=aw.ds&dclid=CKez5OqckN4CFUprwQod-w4LuA
+
+2.despues buscar la carpetade descargas don esta el paquete ===>  google-chrome-stable_current_amd64.deb
+ponemos los siquientes comandosen su terminal ubicando Deacargas
+
+=============> 1--este es el primer comando si no os funciona poner el comando numero 2
+
+echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list
+
+============>2-- este es el segundo  comando
+
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
+
+
+3-Ponemos este comando para actualizar nuestros paquetes
+
+apt update
+
+
+4-Con este comado instalamos el chromme
+
+apt install google-chrome-stable
+
+
+
+5-SI OS SALE ESTE ERROR ES POR QUE YA TINEN INSTALADO EL Chrome Y NO SE VE  SOLO PONGAN ESTE COMADO 
+
+google-chrome-stable ya está en su versión más reciente (70.0.3538.67-1).
+Tal vez quiera ejecutar «apt --fix-broken install» para corregirlo.
+Los siguientes paquetes tienen dependencias incumplidas:
+ google-chrome-stable : Depende: libappindicator3-1 pero no va a instalarse
+                        Recomienda: libu2f-udev pero no es instalable
+E: Dependencias incumplidas. Intente «apt --fix-broken install» sin paquetes (o especifique una solución).
+
+==========>>>>>>  apt --fix-broken install
+
+
+
+
+
+
+6- Finalmente el ultimo comando para Desenpaquetar ponen dpkg -i "nombre de nuestro repositorio"  
+============>dpkg -i google-chrome-stable_current_amd64.deb 
+
+
+...y eso es todo amigos ahora ballan a su busador ya debe salirles el icono. si tienen alguna duda aganmelo saber y si saben otra formas compartan informacion asi Nos apollaremos mutuamente =======>>>>Tigrezhito =tigrezhito@gmail.com
+Y  si quieren otro tipo de aportes aganmelo saber y podre apollarlos... 
+
+
+
+
+
+
+
